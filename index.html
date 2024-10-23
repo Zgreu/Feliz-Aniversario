@@ -95,18 +95,20 @@
         
         let mil = document.getElementById("milena")
         let mel = document.getElementById('melissa')
-        nome = nome.lower()
+        
 
         function mdo(){
+
             let nome = document.getElementById("nome")
             let senha = document.getElementById("senha")
-
-            if(nome.value == 'milena' || nome.value == 'Milena'){
+            
+            
+            if(nome.value.toLowerCase() == 'milena'){
 
             senha.style.display = 'none'  
             mil.style.display = 'block'
 
-            }else if(nome.value == 'melissa'|| nome.value == 'Melissa'){
+            }else if(nome.value.toLowerCase() == 'melissa'){
 
             senha.style.display = 'none'  
             mel.style.display = 'block'
