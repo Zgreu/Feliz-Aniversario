@@ -9,7 +9,7 @@
             text-align: center;
             position: relative;
 
-            width: 99vw;
+            width: 98vw;
             height: 90vh;
         }
         div{
@@ -18,11 +18,62 @@
             top: 50%;
             transform: translate(-50%, -50%);
         }
-
-        div#milena{
-            display: none;
-
+       
+        a{
+            text-decoration: none;
         }
+        div#senha{
+            display: block;
+        }
+        
+        
+        button#melissa{
+            display: none;
+            position: relative;
+
+            color: #5eff00;
+
+            background-color: #B900FF;
+            border-radius: 15px;
+            box-shadow: 1px 1px 7px black;
+            border: none;
+            width: 250px;
+            height: 100px;
+
+            font-size: 1.3em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button#melissa:hover{
+            cursor: pointer;
+            background-color: #8e00c2;
+            color: #4fd800;
+            
+        }
+
+        button#milena{
+            display: none;
+            position: relative;
+
+            color: #B900FF;
+
+            background-color: #5eff00;
+            border-radius: 15px;
+            box-shadow: 1px 1px 7px black;
+            border: none;
+            width: 250px;
+            height: 100px;
+
+            font-size: 1.3em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        button#milena:hover{
+            cursor: pointer;
+            background-color: #4fd800;
+            color: #8e00c2;
+        }
+        
     </style>
 </head>
 <body>
@@ -30,19 +81,37 @@
         <h1>Qual seu nome?</h1>
         <input type="text" name="nome" id="nome" onchange="mdo()">
     </div>
-    <div id="milena">
-        <a href="milena.html">Clique aqui</a>
-    </div>
-</body>
-<script>
-    function mdo(){
-        nome = document.getElementById('nome')
-        senha = document.getElementById('senha')
-        nome += nome.lower()
-       
 
-        if(nome == 'milena')
+    <div class="mimel">
+        <a  href="milena/milena.html"><button id="milena">CLIQUE AQUI</button></a>
+    </div>
+
+    <div class="mimel">
+        <a id='mel' href="melissa/melissa.html"><button id="melissa">CLIQUE AQUI</button></a>
+    </div>
+
+    <script>
+
         
-    }   
-</script>
+        let mil = document.getElementById("milena")
+        let mel = document.getElementById('melissa')
+        nome = nome.lower()
+
+        function mdo(){
+            let nome = document.getElementById("nome")
+            let senha = document.getElementById("senha")
+
+            if(nome.value == 'milena'){
+
+            senha.style.display = 'none'  
+            mil.style.display = 'block'
+
+            }else if(nome.value == 'melissa'){
+
+            senha.style.display = 'none'  
+            mel.style.display = 'block'
+            } 
+    }
+    </script>
+</body>
 </html>
